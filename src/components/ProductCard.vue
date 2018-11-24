@@ -4,7 +4,10 @@
 		<div class="card-body">
 			<h5 class="card-title product-title">{{ productTitle }}</h5>
 			<p class="card-text">{{ productDescription }}</p>
-			<a href="#" class="btn btn-primary" v-on:click="addToCart(product)">Add to cart</a>
+			<button class="btn btn-primary" v-on:click="addToCart(product)">
+				<i class="fas fa-plus"></i>
+				<span>Add to cart</span>
+			</button>
 		</div>
 	</div>
 </template>
@@ -34,11 +37,10 @@ export default {
 			return string.length > length ? string.substring(1, length) + '...' : string
 		},
 		addToCart: function (product){
-			this.$store.dispatch('addToCart', this.product)
+			this.$store.dispatch('addToCart', product);
+			localStorage.setItem('cart', JSON.stringify(this.$store.state.cart));
 		}
 	}
-
-
 }
 </script>
 

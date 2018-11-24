@@ -7,11 +7,15 @@
 
 <script>
 import Header from '@/components/Header.vue'
+import { mapState } from 'vuex'
 
 export default {
 	name: 'App',
 	components: {
 		Header
+	},
+	mounted() {
+		this.$store.dispatch('retrieveLocalStorageCart')
 	},
 }
 </script>
