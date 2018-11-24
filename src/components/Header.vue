@@ -14,7 +14,7 @@ export default {
 	name: 'Header',
 	components: {
 		CartButton
-	}
+	},
 }
 </script>
 
