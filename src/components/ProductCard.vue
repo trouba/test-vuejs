@@ -1,13 +1,18 @@
 <template>
-	<div class="card product-card" style="width: 15rem;">
+	<div class="card product-card">
 		<img class="card-img-top" v-bind:src="productPicture" alt="Card image cap">
-		<div class="card-body">
-			<h5 class="card-title product-title">{{ productTitle }}</h5>
-			<p class="card-text">{{ productDescription }}</p>
-			<button class="btn btn-primary" v-on:click="addToCart(product)">
-				<i class="fas fa-plus"></i>
-				<span>Add to cart</span>
-			</button>
+		<div class="card-body product-content">
+			<div class="product-infos">
+				<h5 class="card-title product-title text-primary">{{ productTitle }}</h5>
+				<p class="card-text">{{ productDescription }}</p>	
+			</div>
+			<div class="product-actions">
+				<button class="btn btn-primary" v-on:click="addToCart(product)">
+					<i class="fas fa-plus product-card__button-icon"></i>
+					<span>Add to cart</span>
+				</button>
+			</div>
+			
 		</div>
 	</div>
 </template>
@@ -51,6 +56,20 @@ export default {
 
 .product-title {
 	text-transform: uppercase;
+}
+
+.product-card__button-icon {
+	margin-right:5px;
+}
+
+.product-actions {
+	margin-top: 10px;
+}
+
+.product-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 </style>

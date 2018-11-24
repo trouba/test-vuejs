@@ -1,9 +1,7 @@
 <template>
 	<div class="cart container">
 		<div class="card" v-if="displayCart">
-			<div class="card-header">
-				Featured
-			</div>
+			<div class="card-header cart-list-header">Items</div>
 			<ul class="list-group list-group-flush" >
 				<transition-group name="fade">
 					<li class="list-group-item" v-for="productGroup in productGroups" :key="productGroup[0].id">
@@ -15,8 +13,6 @@
 		<div v-else>
 			<p>Your cart is empty</p>
 		</div>
-
-		
 	</div>
 </template>
 
@@ -49,7 +45,13 @@ export default {
 <style scoped>
 .cart {
 	padding-top: 20px;
+	padding-bottom: 20px;
 }
+
+.cart-list-header {
+	text-align:left;
+}
+
 .fade-enter-active, .fade-leave-active {
 	transition: opacity .3s;
 }

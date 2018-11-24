@@ -1,10 +1,11 @@
 <template>
 	<div class="product-group">
 		<div class="product-infos">
+			<img class="product-group__picture " v-bind:src="productPicture" alt="Card image cap">
 			<span>{{ productTitle }}</span>
 		</div>
-		<button class="btn btn-danger" v-on:click="removeFromCart(productGroup)">
-			<i class="fas fa-trash-alt"></i>
+		<button class="btn btn-sm btn-outline-danger" v-on:click="removeFromCart(productGroup)">
+			<i class="fas fa-trash-alt product-group__icon"></i>
 			<span>Remove {{ productGroup.length }} {{ deleteLabel }}</span>
 		</button>
 	</div>
@@ -53,6 +54,17 @@ export default {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
+
+.product-group__picture {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 15px;	
+}
+
+.product-group__icon {
+	margin-right: 5px;
 }
 
 </style>
