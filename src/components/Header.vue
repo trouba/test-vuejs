@@ -1,8 +1,14 @@
 <template>
   <div class="header">
-    <div class="logo">logo</div>
+    <router-link :to="{name: 'home'}">
+      <div class="logo">logo</div>
+    </router-link>
+    
     <div class="basket-button">
-      <div class="button"><i class="fas fa-shopping-cart"></i> Cart (<span>0</span>) </div>
+      <button type="button" class="btn btn-light cart-button">
+        <i class="fas fa-shopping-cart"></i> 
+        <router-link :to="{name: 'cart'}">Cart (<span>0</span>)</router-link>
+      </button>
     </div>
   </div>
 </template>
@@ -23,5 +29,9 @@ export default {
   background-color: #f84a1e;
   color:#fff;
   padding:20px;
+}
+
+.cart-button {
+
 }
 </style>
