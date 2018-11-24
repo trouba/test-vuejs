@@ -4,20 +4,17 @@
       <div class="logo">logo</div>
     </router-link>
     
-    <div class="basket-button">
-      <button type="button" class="btn btn-light cart-button">
-        <i class="fas fa-shopping-cart"></i> 
-        <router-link :to="{name: 'cart'}">Cart (<span>0</span>)</router-link>
-      </button>
-    </div>
+    <CartButton></CartButton>
   </div>
 </template>
 
 <script>
+import CartButton from '@/components/CartButton.vue'
+
 export default {
   name: 'Header',
-  props: {
-    msg: String
+  components: {
+    CartButton
   }
 }
 </script>
