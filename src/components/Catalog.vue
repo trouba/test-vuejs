@@ -11,6 +11,11 @@
 
 <script>
 import ProductCard from '@/components/ProductCard.vue'
+import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+ 
+Vue.use(VueAxios, axios)
 
 export default {
 	name: 'Catalog',
@@ -31,6 +36,11 @@ export default {
 			]
 		}
 	},
+	mounted () {
+		this.axios
+			.get('https://jsonplaceholder.typicode.com/posts?_page=1&_limit=20')
+			.then(response => (console.log(response)))
+		}
 }
 </script>
 
