@@ -1,17 +1,17 @@
 <template>
-  <div class="banner">
-    banner
-  </div>
+	<div class="banner">
+		banner
+	</div>
 </template>
 
 <script>
-	export default {
-	  name: 'Banner',
-	}
+export default {
+	name: 'Banner',
+}
 </script>
 
 <style>
 .banner {
-  background-image: 
+	background-image: 
 }
 </style>

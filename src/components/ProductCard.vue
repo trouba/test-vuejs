@@ -24,9 +24,7 @@ export default {
 
 <style scoped>
 .product-card {
-  
   background-color: red;
-
 }
 
 </style>
