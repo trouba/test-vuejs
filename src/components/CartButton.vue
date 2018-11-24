@@ -18,3 +18,4 @@ export default {
 	background-image: 
 }
 </style>
+	

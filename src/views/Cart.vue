@@ -1,5 +1,5 @@
 <template>
-  <div class="cart">
-    cart
-  </div>
+	<div class="cart">
+		cart
+	</div>
 </template>
