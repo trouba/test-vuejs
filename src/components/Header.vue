@@ -3,7 +3,6 @@
     <router-link :to="{name: 'home'}">
       <div class="logo">logo</div>
     </router-link>
-    
     <CartButton></CartButton>
   </div>
 </template>
@@ -28,7 +27,4 @@ export default {
   padding:20px;
 }
 
-.cart-button {
-
-}
 </style>
