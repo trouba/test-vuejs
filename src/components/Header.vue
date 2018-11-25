@@ -53,6 +53,11 @@ export default {
 	margin-right: 50px;
 }
 
+.logo:hover {
+	text-decoration: none;
+	color:#007bff;
+}
+
 .logo img {
 	height: 40px;
 	margin-right: 10px;
