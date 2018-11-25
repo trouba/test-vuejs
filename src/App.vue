@@ -3,15 +3,14 @@
 		<Header ></Header>
 		<router-view/>
 		<div class="footer">
-			<p>Illustrations by Katerina Limpitsouni for <a href="https://undraw.co/">undraw.co</a></p>
-			<p>Made by <a href="www.nicolasr.website">NicolasR</a></p>
+			<p>Illustrations by Katerina Limpitsouni for <a href="https://undraw.co/" target="_blank">undraw.co</a></p>
+			<p>Made by <a href="www.nicolasr.website" target="_blank">NicolasR</a></p>
 		</div>
 	</div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
-import { mapState } from 'vuex'
 
 export default {
 	name: 'App',

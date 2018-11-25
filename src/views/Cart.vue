@@ -10,8 +10,16 @@
 				</transition-group>
 			</ul>
 		</div>
-		<div v-else>
-			<p>Your cart is empty</p>
+		<div class="cart-empty" v-else>
+			<div class="cart-empty__message">
+				<h1>Your cart is empty</h1>
+				<p>You might want to go back to
+					<router-link :to="{name: 'home'}">
+						<span>our products page <i class="fas fa-arrow-right"></i></span>
+					</router-link>
+				</p>
+				<img src="../assets/sad.svg">				
+			</div>
 		</div>
 	</div>
 </template>
@@ -61,4 +69,7 @@ export default {
 	opacity: 0;
 }
 
+.cart-empty__message img {
+	width: 50vw;
+}
 </style>

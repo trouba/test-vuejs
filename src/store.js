@@ -26,7 +26,7 @@ export default new Vuex.Store({
 			let updatedCart = state.cart
 			
 			updatedCart = _.filter(updatedCart, function(product) { 
-			    return product.id != removedProduct.id; 
+				return product.id != removedProduct.id;
 			});
 
 			state.cart = updatedCart
@@ -49,7 +49,7 @@ export default new Vuex.Store({
 					console.log('no more products')
 				}
 			}).catch(error => {
-			    console.log(error.response)
+				console.log(error.response)
 			});
 
 		},
