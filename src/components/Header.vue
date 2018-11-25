@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -31,6 +31,10 @@ export default {
 	height: 90px;
 }
 
+.logo {
+	display: flex;
+}
+
 .logo img {
 	height: 40px;
 	margin-right: 10px;
@@ -38,7 +42,7 @@ export default {
     align-items: center;
 }
 
-.logo-text {
+.logo-text {
 	font-weight: bold;
     font-size: 2rem;
 }

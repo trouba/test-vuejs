@@ -10,7 +10,6 @@
 				</div>
 			</div>	
 		</div>
-		
 	</div>
 </template>
 
@@ -24,7 +23,7 @@ export default {
 .banner {
 	height: 50vh;
 	margin: 20px;
-	background-image: url(/img/desert.78656a40.svg);
+	background-image: url(../assets/desert.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;

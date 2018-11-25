@@ -1,6 +1,5 @@
 <template>
 	<div class="catalog container">
-		add list of product components
 		<div class="row">
 			<div class="col col-lg-4 col-md-6 	 col-sm-6 col-xs-12 d-flex align-items-stretch" v-for="product in products" align="center" :key="product.id">
 				<ProductCard :product="product"></ProductCard>
@@ -44,7 +43,7 @@ export default {
 
 <style scoped>
 .catalog {
-	padding-bottom: 50px;
+	padding: 50px 0;
 }
 
 .load-button {
