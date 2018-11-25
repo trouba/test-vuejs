@@ -1,29 +1,23 @@
-# test-vuejs
+**Project overview**
 
-## Project setup
-```
-npm install
-```
+This website is made with [Vue.js](https://vuejs.org/).
+It uses [Vue router](https://router.vuejs.org/) and [Vuex](https://vuex.vuejs.org/).
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+**Installation**
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Clone the repository locally and run
 
-### Run your tests
-```
-npm run test
-```
+    npm install
 
-### Lints and fixes files
-```
-npm run lint
-```
+**Run locally**
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Run
+
+    npm run serve
+
+**E2E test**
+
+End-to-end tests are made with [Nightwatch.js](http://nightwatchjs.org/)
+To launch tests, run 
+
+    npm run test:e2e
