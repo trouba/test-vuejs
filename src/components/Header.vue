@@ -1,12 +1,19 @@
 <template>
 	<div class="header">
-		<router-link :to="{name: 'home'}">
-			<div class="logo">
+		<div class="header-left">
+			<router-link :to="{name: 'home'}" class="logo">
 				<img src="../assets/logo.png">
 				<span class="logo-text">LIBYK</span>
-			</div>
-		</router-link>
-		<CartButton></CartButton>
+			</router-link> 
+			<router-link :to="{name: 'home'}" class="header-link text-primary" exact>
+				Catalog
+			</router-link>
+		</div>
+		<div class="header-right">
+			<CartButton></CartButton>
+		</div>
+		
+		
 	</div>
 </template>
 
@@ -18,6 +25,11 @@ export default {
 	components: {
 		CartButton
 	},
+	computed: {
+		headerLinkActive: function() {
+			return true;
+		}
+	}
 }
 </script>
 
@@ -30,9 +42,15 @@ export default {
 	padding:20px;
 	height: 90px;
 }
+.header-left {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
 
 .logo {
 	display: flex;
+	margin-right: 50px;
 }
 
 .logo img {
@@ -47,4 +65,17 @@ export default {
     font-size: 2rem;
 }
 
+.header-link {
+	font-weight: bold;
+	border-bottom: solid 2px transparent;
+}
+
+.header-link:hover {
+	text-decoration: none;
+	border-bottom: solid 2px #7cb4f9;
+}
+
+a.header-link.router-link-active {
+	border-bottom: solid 2px #007bff;
+}
 </style>

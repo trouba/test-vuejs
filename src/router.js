@@ -11,13 +11,13 @@ export default new Router({
 		path: '/',
 		name: 'home',
 		component: Home,
-		pathToRegexpOptions: { strict: true } 
+	
 	},
 	{
 		path: '/cart',
 		name: 'cart',
 		component: Cart,
-		pathToRegexpOptions: { strict: true } 
+
 	}
 	]
 })
