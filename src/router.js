@@ -16,8 +16,8 @@ export default new Router({
 	{
 		path: '/cart',
 		name: 'cart',
-	  	component: Cart,
-	  	pathToRegexpOptions: { strict: true } 
+		component: Cart,
+		pathToRegexpOptions: { strict: true } 
 	}
 	]
 })

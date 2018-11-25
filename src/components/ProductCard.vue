@@ -1,21 +1,21 @@
 <template>
 	<transition name="fade">
-	<div class="card product-card">
-		<img class="card-img-top" v-bind:src="productPicture" alt="Card image cap">
-		<div class="card-body product-content">
-			<div class="product-infos">
-				<h5 class="card-title product-title text-primary">{{ productTitle }}</h5>
-				<p class="card-text">{{ productDescription }}</p>	
+		<div class="card product-card">
+			<img class="card-img-top" v-bind:src="productPicture" alt="Card image cap">
+			<div class="card-body product-content">
+				<div class="product-infos">
+					<h5 class="card-title product-title text-primary">{{ productTitle }}</h5>
+					<p class="card-text">{{ productDescription }}</p>	
+				</div>
+				<div class="product-actions">
+					<button class="btn btn-primary" v-on:click="addToCart(product)">
+						<i class="fas fa-plus product-card__button-icon"></i>
+						<span>Add to cart</span>
+					</button>
+				</div>
+				
 			</div>
-			<div class="product-actions">
-				<button class="btn btn-primary" v-on:click="addToCart(product)">
-					<i class="fas fa-plus product-card__button-icon"></i>
-					<span>Add to cart</span>
-				</button>
-			</div>
-			
 		</div>
-	</div>
 	</transition>
 </template>
 
@@ -30,14 +30,14 @@ export default {
 	}, 
 	computed: {
 		productPicture: function () {
-	      return 'https://picsum.photos/400/200?image=' + this.product.id * 2 
-	    },
-	    productTitle: function(){
-	    	return this.cutString(this.product.title, 12);
-	    },
-	    productDescription: function(){
-	    	return this.cutString(this.product.body, 100)
-	    },
+			return 'https://picsum.photos/400/200?image=' + this.product.id * 2 
+		},
+		productTitle: function(){
+			return this.cutString(this.product.title, 12);
+		},
+		productDescription: function(){
+			return this.cutString(this.product.body, 100)
+		},
 	},
 	methods: {
 		cutString: function (string, length){

@@ -2,11 +2,9 @@
 	<div class="cart-button">
 		<router-link :to="{name: 'cart'}">
 			<button type="button" class="btn btn-primary cart-button">
-
 				<i class="fas fa-shopping-cart"></i> 
-
 				Cart
-			 <span class="badge badge-light">{{cartSize}}</span>
+				<span class="badge badge-light">{{cartSize}}</span>
 			</button>
 		</router-link>
 	</div>
@@ -32,4 +30,3 @@ export default {
 	background-image: 
 }
 </style>
-	

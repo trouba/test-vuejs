@@ -2,7 +2,6 @@
 // http://nightwatchjs.org/guide#usage
 
 let home_url = process.env.VUE_DEV_SERVER_URL
-let cart_url = 'http://localhost:8000/'
 
 module.exports = {
 	'Add to cart from catalog page and empty cart from cart page': browser => {

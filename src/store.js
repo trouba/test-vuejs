@@ -45,11 +45,7 @@ export default new Vuex.Store({
 				if (products.length > 1) {
 					commit('SET_PRODUCTS', products)
 					commit('INCREMENT_PAGINATION')
-				} else {
-					console.log('no more products')
 				}
-			}).catch(error => {
-				console.log(error.response)
 			});
 
 		},
