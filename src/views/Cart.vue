@@ -46,6 +46,7 @@ export default {
 .cart {
 	padding-top: 20px;
 	padding-bottom: 20px;
+	min-height: calc(100vh - 90px);
 }
 
 .cart-list-header {

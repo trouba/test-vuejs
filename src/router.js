@@ -6,16 +6,19 @@ import Cart from './views/Cart.vue'
 Vue.use(Router)
 
 export default new Router({
+	mode: 'history',
 	routes: [
 	{
 		path: '/',
 		name: 'home',
-		component: Home
+		component: Home,
+		pathToRegexpOptions: { strict: true } 
 	},
 	{
 		path: '/cart',
 		name: 'cart',
-	  	component: Cart
+	  	component: Cart,
+	  	pathToRegexpOptions: { strict: true } 
 	}
 	]
 })
