@@ -2,6 +2,10 @@
 	<div id="app">
 		<Header ></Header>
 		<router-view/>
+		<div class="footer">
+			<p>Illustrations by Katerina Limpitsouni for <a href="https://undraw.co/">undraw.co</a></p>
+			<p>Made by <a href="www.nicolasr.website">NicolasR</a></p>
+		</div>
 	</div>
 </template>
 
@@ -32,5 +36,10 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
 	color: #2c3e50;
+	background-color: #eee;
+}
+
+.footer {
+    padding: 40px;	
 }
 </style>

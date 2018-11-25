@@ -23,7 +23,7 @@ export default {
 	}, 
 	computed: {
 		productPicture: function () {
-			return 'https://picsum.photos/400/200?image=' + this.productGroup[0].id * 2 
+			return 'https://picsum.photos/200/200?image=' + this.productGroup[0].id
 		},
 		productTitle: function() {
 			let productTitle = this.productGroup[0].title

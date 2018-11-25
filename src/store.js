@@ -8,12 +8,13 @@ Vue.use(Vuex, axios, VueAxios)
 
 export default new Vuex.Store({
 	state: {
+		pagination: 1,
 		products: [],
 		cart: []
 	},
 	mutations: {
 		SET_PRODUCTS (state, products) {
-			state.products = products
+			state.products = state.products.concat(products)
 		},
 		RETRIEVE_LOCAL_STORAGE_CART (state, localCart) {
 			state.cart = localCart
@@ -30,15 +31,27 @@ export default new Vuex.Store({
 
 			state.cart = updatedCart
 		},
+		INCREMENT_PAGINATION (state) {
+			state.pagination++
+		}, 
 	},
 	actions: {
 		getProducts ({ commit }) {
+			const source = 'https://jsonplaceholder.typicode.com/posts?_page=' + this.state.pagination
 			axios
-			.get('https://jsonplaceholder.typicode.com/posts?_page=1&_limit=20')
+			.get(source)
 			.then(r => r.data)
 			.then(products => {
-				commit('SET_PRODUCTS', products)
-			})
+				if (products.length > 1) {
+					commit('SET_PRODUCTS', products)
+					commit('INCREMENT_PAGINATION')
+				} else {
+					console.log('no more products')
+				}
+			}).catch(error => {
+			    console.log(error.response)
+			});
+
 		},
 		retrieveLocalStorageCart ({commit}){
 			if (localStorage.getItem('cart') && localStorage.getItem('cart') !== 'undefined') {

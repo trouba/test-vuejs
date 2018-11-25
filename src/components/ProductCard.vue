@@ -1,4 +1,5 @@
 <template>
+	<transition name="fade">
 	<div class="card product-card">
 		<img class="card-img-top" v-bind:src="productPicture" alt="Card image cap">
 		<div class="card-body product-content">
@@ -15,6 +16,7 @@
 			
 		</div>
 	</div>
+	</transition>
 </template>
 
 <script>

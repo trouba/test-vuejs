@@ -22,7 +22,6 @@ export default {
 .header {
 	display: flex;
 	justify-content: space-between;
-	background-color: #eee;
 	color:#fff;
 	padding:20px;
 }
