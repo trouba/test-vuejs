@@ -4,7 +4,7 @@
 		<router-view/>
 		<div class="footer">
 			<p>Illustrations by Katerina Limpitsouni for <a href="https://undraw.co/" target="_blank">undraw.co</a></p>
-			<p>Made by <a href="www.nicolasr.website" target="_blank">NicolasR</a></p>
+			<p>Made by <a href="http://www.nicolasr.website" target="_blank">NicolasR</a></p>
 		</div>
 	</div>
 </template>
